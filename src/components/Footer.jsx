@@ -7,7 +7,6 @@ import Stack from '@mui/material/Stack'
 import Divider from '@mui/material/Divider'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import LinkIcon from '@mui/icons-material/Link'
 import { useContent } from '../state/ContentProvider.jsx'
 
 export default function Footer() {
