@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Hydrafacial",
+    "price_usd": 100,
+    "approx_mins": 60,
+    "description" : "Describe a hydrafacial service here!",
+    "image": "/public/vite.svg"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "rating": 5,
+    "customer_name": "Joe Brown",
+    "service_id":  1,
+    "testimony": "Larry the Lobster was amazing!",
+    "date": "2025-12-30"
+  }
+]

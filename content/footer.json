@@ -1,0 +1,28 @@
+{
+  "contact": {
+    "first_name": "Larry",
+    "last_name": "Lobster",
+    "email": "lobster@gmail.com",
+    "phone": "503-333-3333"
+  },
+  "address": {
+    "street": "1111 test st",
+    "city": "Portland",
+    "state": "OR",
+    "zip": "97219"
+  },
+  "social": {
+    "tiktok": "",
+    "instagram": "",
+    "linkedin": ""
+  },
+  "availability": {
+    "M": "9-5",
+    "T": "9-5",
+    "W": "9-5",
+    "Th": "",
+    "F": "",
+    "Sa": "",
+    "Su": ""
+  }
+}
