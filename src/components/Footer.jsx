@@ -8,8 +8,17 @@ import Divider from '@mui/material/Divider'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import LinkIcon from '@mui/icons-material/Link'
+import { useContent } from '../state/ContentProvider.jsx'
 
 export default function Footer() {
+  const { content } = useContent()
+  const footer = content?.footer || {}
+
+  const contact = footer.contact
+  const availability = footer.availability
+  const address = footer.address
+  const social = footer.social
+
   return (
     <Box
       component="footer"
@@ -38,52 +47,45 @@ export default function Footer() {
             <Typography variant="h6" gutterBottom color="text.primary">
               Contact
             </Typography>
-            <Typography variant="body2" color="text.secondary">Esthetician Name</Typography>
-            <Typography variant="body2" color="text.secondary">email@example.com</Typography>
-            <Typography variant="body2" color="text.secondary">(555) 123-4567</Typography>
+              <Typography variant="body2" color="text.secondary">{contact.email}</Typography>
+              <Typography variant="body2" color="text.secondary">{contact.phone}</Typography>
           </Grid>
           <Grid xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom color="text.primary">
               Hours
             </Typography>
-            <Typography variant="body2" color="text.secondary">Tue–Fri: 10:00 AM – 6:00 PM</Typography>
-            <Typography variant="body2" color="text.secondary">Sat: 10:00 AM – 4:00 PM</Typography>
-            <Typography variant="body2" color="text.secondary">Sun–Mon: Closed</Typography>
+            {availability.map((line, idx) => (
+              <Typography key={idx} variant="body2" color="text.secondary">{line}</Typography>
+            ))}
           </Grid>
           <Grid xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom color="text.primary">
               Address
             </Typography>
-            <Typography variant="body2" color="text.secondary">123 Sage Lane</Typography>
-            <Typography variant="body2" color="text.secondary">Greenfield, CA 90000</Typography>
+              <Typography variant="body2" color="text.secondary">{address.street}</Typography>
+              <Typography variant="body2" color="text.secondary">{address.city + ', ' + address.state + ' ' + address.zip}</Typography>
           </Grid>
           <Grid xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom color="text.primary">
               Follow
             </Typography>
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
-              <Link href="#" color="inherit" aria-label="Instagram" underline="hover" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
+              <Link href={social.instagram} target="_blank" rel="noopener noreferrer" color="inherit" aria-label="Instagram" underline="hover" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
                 <InstagramIcon fontSize="small" />
                 <Typography variant="body2">Instagram</Typography>
               </Link>
             </Stack>
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" sx={{ mt: 1 }}>
-              <Link href="#" color="inherit" aria-label="LinkedIn" underline="hover" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
+              <Link href={social.linkedin} target="_blank" rel="noopener noreferrer" color="inherit" aria-label="LinkedIn" underline="hover" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
                 <LinkedInIcon fontSize="small" />
                 <Typography variant="body2">LinkedIn</Typography>
-              </Link>
-            </Stack>
-            <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" sx={{ mt: 1 }}>
-              <Link href="#" color="inherit" aria-label="TikTok" underline="hover" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
-                <LinkIcon fontSize="small" />
-                <Typography variant="body2">TikTok</Typography>
               </Link>
             </Stack>
           </Grid>
         </Grid>
         <Divider sx={{ my: 3, marginTop: '1rem', marginBottom: '1rem' }} />
         <Typography variant="caption" color="text.secondary">
-          © {new Date().getFullYear()} Esthetician. All rights reserved.
+          © {new Date().getFullYear()} {contact.first_name + ' ' + contact.last_name}. All rights reserved.
         </Typography>
       </Container>
     </Box>

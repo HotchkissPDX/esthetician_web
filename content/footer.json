@@ -1,28 +1,22 @@
 {
   "contact": {
-    "first_name": "Larry",
-    "last_name": "Lobster",
-    "email": "lobster@gmail.com",
-    "phone": "503-333-3333"
+    "first_name": "Madelyn",
+    "last_name": "Hotchkiss",
+    "email": "maddy042301@icloud.com",
+    "phone": "503-318-5452"
   },
   "address": {
-    "street": "1111 test st",
-    "city": "Portland",
+    "street": "4871 Meadows Road #176",
+    "city": "Lake Oswego",
     "state": "OR",
-    "zip": "97219"
+    "zip": "97035"
   },
   "social": {
-    "tiktok": "",
     "instagram": "",
-    "linkedin": ""
+    "linkedin": "https://www.linkedin.com/in/madelyn-hotchkiss-4125a4196/"
   },
-  "availability": {
-    "M": "9-5",
-    "T": "9-5",
-    "W": "9-5",
-    "Th": "",
-    "F": "",
-    "Sa": "",
-    "Su": ""
-  }
+  "availability": [
+    "Mon-Fri: 10AM—6PM",
+    "Sat-Sun: 10AM—5PM"
+  ]
 }

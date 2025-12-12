@@ -2,9 +2,9 @@
   {
     "id": 1,
     "name": "Hydrafacial",
-    "price_usd": 100,
+    "price_usd": 250,
     "approx_mins": 60,
-    "description" : "Describe a hydrafacial service here!",
-    "image": "/public/vite.svg"
+    "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
+    "image": "/public/hydrafacial.png"
   }
 ]
