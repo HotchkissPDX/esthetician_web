@@ -35,9 +35,23 @@ let theme = createTheme({
     button: { textTransform: 'none', fontWeight: 500 },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: (theme) => ({
+        'a:hover': {
+          color: theme.palette.primary.dark, // darker sage on hover
+        },
+      }),
+    },
     MuiLink: {
       defaultProps: {
         underline: 'hover',
+      },
+      styleOverrides: {
+        root: ({ theme }) => ({
+          '&:hover': {
+            color: theme.palette.primary.dark,
+          },
+        }),
       },
     },
     MuiAppBar: {
