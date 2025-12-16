@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import { useContent } from '../state/ContentProvider.jsx'
+import BlushDivider from '../components/BlushDivider.jsx'
 
 export default function About() {
   const { content } = useContent()
@@ -53,17 +54,7 @@ export default function About() {
             { contact.first_name + ' ' + contact.last_name }
           </Typography>
           {/* Blush divider separating header from introduction */}
-          <Box
-            sx={{
-              height: 4,
-              width: { xs: '40%', sm: '30%' },
-              bgcolor: '#F4C2C2', // blush tone
-              borderRadius: 1,
-              mb: 2,
-              mt: -0.5,
-              mx: 'auto', // center horizontally under the header
-            }}
-          />
+          <BlushDivider />
           {
             introduction.map((p, idx) => (
               <Typography key={idx} variant="body1" color="text.secondary">
@@ -93,6 +84,8 @@ export default function About() {
               sx={{
                 width: '100%',
                 height: 'auto',
+                // Rounded blush border to match the divider styling
+                border: '4px solid #F4C2C2',
                 borderRadius: 2,
                 display: 'block',
                 objectFit: 'cover',
@@ -101,14 +94,53 @@ export default function About() {
           ) : null}
         </Grid>
       </Grid>
-      {/* Full-width extended description below the image + introduction */}
+      {/* Extended description with jade roller framing on the left */}
       {extended && extended.length > 0 ? (
         <Box sx={{ mt: { xs: 3, md: 5 } }}>
-          {extended.map((p, idx) => (
-            <Typography key={`ext-${idx}`} variant="body1" color="text.secondary" sx={{ mb: 1.5 }}>
-              {p}
-            </Typography>
-          ))}
+          <Grid container spacing={2} alignItems="flex-start" wrap="nowrap" direction="row">
+            {/* Decorative jade roller in blush as a vertical frame */}
+            <Grid item xs="auto" sx={{ alignSelf: 'flex-start' }}>
+              <Box
+                aria-hidden
+                sx={{
+                  width: { xs: 100, sm: 120 },
+                  height: { xs: 100, sm: 120 },
+                  mx: 0,
+                  mb: 0,
+                  backgroundColor: '#F4C2C2', // blush tone
+                  WebkitMaskImage: 'url(/jade-roller.png)',
+                  maskImage: 'url(/jade-roller.png)',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
+                  WebkitMaskPosition: 'center',
+                  maskPosition: 'center',
+                  // Tall aspect ratio to mimic a vertical framing element
+                  aspectRatio: '1 / 3',
+                  display: 'block',
+                }}
+              />
+            </Grid>
+            {/* Extended text */}
+            <Grid
+              item
+              xs
+              sx={{
+                alignSelf: 'flex-start',
+                minWidth: 0,
+                // Add padding-left so the text doesn't visually collide with the jade roller
+                pl: 10,
+                pt: 2
+              }}
+            >
+              {extended.map((p, idx) => (
+                <Typography key={`ext-${idx}`} variant="body1" color="text.secondary" sx={{ mb: 1.5 }}>
+                  {p}
+                </Typography>
+              ))}
+            </Grid>
+          </Grid>
         </Box>
       ) : null}
     </Box>

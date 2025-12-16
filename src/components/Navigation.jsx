@@ -91,6 +91,24 @@ export default function Navigation() {
               </Button>
             </Box>
           )}
+          {/* Spacer to push the site icon to the far right */}
+          <Box sx={{ flexGrow: 1 }} />
+          {/* Site icon linking to About page (right side) */}
+          <IconButton
+            component={NavLink}
+            to="/about"
+            aria-label="Go to About page"
+            color="inherit"
+            size="large"
+            sx={{ p: 0.5 }}
+          >
+            <Box
+              component="img"
+              src="/sage.png"
+              alt="Site icon"
+              sx={{ width: 28, height: 28, display: 'block', borderRadius: 1 }}
+            />
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
