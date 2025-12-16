@@ -62,14 +62,14 @@ export default function Navigation() {
                 <MenuItem component={NavLink} to="/services" onClick={handleMenuClose} style={linkStyle} sx={{ borderRadius: 1 }}>
                   Services
                 </MenuItem>
+                <MenuItem component={NavLink} to="/book" onClick={handleMenuClose} style={linkStyle} sx={{ borderRadius: 1 }}>
+                  Book
+                </MenuItem>
                 <MenuItem component={NavLink} to="/testimonials" onClick={handleMenuClose} style={linkStyle} sx={{ borderRadius: 1 }}>
                   Testimonials
                 </MenuItem>
                 <MenuItem component={NavLink} to="/contact" onClick={handleMenuClose} style={linkStyle} sx={{ borderRadius: 1 }}>
                   Contact
-                </MenuItem>
-                <MenuItem component={NavLink} to="/book" onClick={handleMenuClose} style={linkStyle} sx={{ borderRadius: 1 }}>
-                  Book
                 </MenuItem>
               </Menu>
             </>
@@ -81,14 +81,14 @@ export default function Navigation() {
               <Button component={NavLink} to="/services" color="inherit" style={linkStyle} sx={{ borderRadius: 2 }}>
                 Services
               </Button>
+              <Button component={NavLink} to="/book" color="inherit" style={linkStyle} sx={{ borderRadius: 2 }}>
+                Book
+              </Button>
               <Button component={NavLink} to="/testimonials" color="inherit" style={linkStyle} sx={{ borderRadius: 2 }}>
                 Testimonials
               </Button>
               <Button component={NavLink} to="/contact" color="inherit" style={linkStyle} sx={{ borderRadius: 2 }}>
                 Contact
-              </Button>
-              <Button component={NavLink} to="/book" color="inherit" style={linkStyle} sx={{ borderRadius: 2 }}>
-                Book
               </Button>
             </Box>
           )}

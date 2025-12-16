@@ -11,15 +11,15 @@
     {
       "rating": 5,
       "customer_name": "Matthew Hotchkiss",
-      "service_id": 1,
-      "testimony": "Madelyn is absolutely amazing at what she does! She is personal, attentive, and knowledgeable. I cannot recommend her services more!",
+      "service_id": 2,
+      "testimony": "Madelyn is my absolute fav. She's an exceptional esthetician, and really makes me feel taken care of.",
       "date": "2025-12-25"
     },
     {
       "rating": 5,
       "customer_name": "Matthew Hotchkiss",
-      "service_id": 1,
-      "testimony": "Madelyn is absolutely amazing at what she does! She is personal, attentive, and knowledgeable. I cannot recommend her services more!",
+      "service_id": 3,
+      "testimony": "Madelyn is one of a kind! I feel calm, restored, and glowing after every service. I feel comfortable and heard every time I come in. If I could give 6 stars I would!",
       "date": "2025-12-25"
     }
   ]

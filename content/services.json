@@ -5,26 +5,22 @@
     {
       "id": 1,
       "name": "Hydrafacial",
-      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
-      "image": "facial.jpg"
+      "description" : "Transform your skin with the ultimate 3-in-1 facial treatment that cleanses, exfoliates, and hydrates. The HydraFacial uses patented vortex technology to gently remove impurities and dead skin cells while simultaneously infusing your skin with nourishing serums tailored to your unique needs."
     },
     {
       "id": 2,
       "name": "HydroPeptide Facial",
-      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
-      "image": "facial.jpg"
+      "description" : "This advanced facial harnesses the science of peptides, powerful amino acid chains that work at the cellular level to firm, lift, and restore your skin's natural vitality. Infused with nutrient-rich botanicals, antioxidants, and intensive hydration, each treatment is customized to address your specific concerns—from fine lines and loss of firmness to dehydration and uneven tone."
     },
     {
       "id": 3,
       "name": "Marini Facial",
-      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
-      "image": "facial.jpg"
+      "description" : "Experience the gold standard in clinical skincare with a Jan Marini Facial—a physician-developed treatment that delivers dramatic, visible results through pharmaceutical-grade formulations and proven science.This results-oriented facial combines professional-strength exfoliation, targeted corrective serums, and intensive rejuvenation to address your most stubborn skin concerns."
     },
     {
       "id": 4,
       "name": "Neveskin Facial",
-      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
-      "image": "facial.jpg"
+      "description" : "Discover the revolutionary Neveskin Facial—an innovative, non-invasive treatment that harnesses advanced electroporation technology to transform your skin from within. This cutting-edge facial delivers active ingredients deeper than traditional methods, creating visible lifting, tightening, and rejuvenation without needles or downtime."
     }
   ]
 }
