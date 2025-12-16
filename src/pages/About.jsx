@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import { useContent } from '../state/ContentProvider.jsx'
 import BlushDivider from '../components/BlushDivider.jsx'
+import { publicUrl } from '../utils/assetPath.js'
 
 export default function About() {
   const { content } = useContent()
@@ -18,11 +19,9 @@ export default function About() {
     return str.split(/\n\n|\r\n\r\n|\n|\r/g).filter(Boolean)
   }
 
-  // Ensure images from the public folder resolve correctly (e.g., "headshot.jpeg" -> "/headshot.jpeg")
+  // Resolve images from the public folder using Vite's base
   function resolveImageSrc(src) {
-    if (!src) return src
-    if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('/')) return src
-    return `/${src}`
+    return publicUrl(src)
   }
 
   return (
@@ -108,8 +107,8 @@ export default function About() {
                   mx: 0,
                   mb: 0,
                   backgroundColor: '#F4C2C2', // blush tone
-                  WebkitMaskImage: 'url(/jade-roller.png)',
-                  maskImage: 'url(/jade-roller.png)',
+                  WebkitMaskImage: `url(${publicUrl('jade-roller.png')})`,
+                  maskImage: `url(${publicUrl('jade-roller.png')})`,
                   WebkitMaskRepeat: 'no-repeat',
                   maskRepeat: 'no-repeat',
                   WebkitMaskSize: 'contain',

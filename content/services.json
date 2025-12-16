@@ -1,10 +1,30 @@
-[
-  {
-    "id": 1,
-    "name": "Hydrafacial",
-    "price_usd": 250,
-    "approx_mins": 60,
-    "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
-    "image": "/public/hydrafacial.png"
-  }
-]
+{
+  "generic_text": "Explore my skincare services! For an exhaustive list of services and pricing, please visit the link below.",
+  "external_url": "https://www.restore.com/skin-health/or001",
+  "services": [
+    {
+      "id": 1,
+      "name": "Hydrafacial",
+      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
+      "image": "facial.jpg"
+    },
+    {
+      "id": 2,
+      "name": "HydroPeptide Facial",
+      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
+      "image": "facial.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Marini Facial",
+      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
+      "image": "facial.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Neveskin Facial",
+      "description" : "A Signature Hydrafacial that comes with personalized Boosters to address specific skin concerns and LED Light Therapy to further reduce visible signs of aging",
+      "image": "facial.jpg"
+    }
+  ]
+}

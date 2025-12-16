@@ -10,6 +10,7 @@ import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import MenuIcon from '@mui/icons-material/Menu'
+import { publicUrl } from '../utils/assetPath.js'
 
 export default function Navigation() {
   // Collapse navigation at or below 450px width
@@ -104,7 +105,7 @@ export default function Navigation() {
           >
             <Box
               component="img"
-              src="/sage.png"
+              src={publicUrl('sage.png')}
               alt="Site icon"
               sx={{ width: 28, height: 28, display: 'block', borderRadius: 1 }}
             />
