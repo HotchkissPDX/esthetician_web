@@ -37,7 +37,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          BASE_URL: /${{ github.event.repository.name }}/
+          BASE_URL: /
 
       - name: Add CNAME file
         run: echo "madelyn-hotchkiss.com" > ./dist/CNAME
