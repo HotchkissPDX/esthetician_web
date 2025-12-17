@@ -39,6 +39,9 @@ jobs:
         env:
           BASE_URL: /${{ github.event.repository.name }}/
 
+      - name: Add CNAME file
+        run: echo "madelyn-hotchkiss.com" > ./dist/CNAME
+
       - name: Upload production artifacts
         uses: actions/upload-pages-artifact@v3
         with:
