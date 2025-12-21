@@ -21,15 +21,50 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Ensure Puppeteer downloads and uses its bundled Chromium on Linux runners
+      PUPPETEER_PRODUCT: chrome
+      PUPPETEER_CACHE_DIR: ~/.cache/puppeteer
+      # Keep download enabled for CI, since GitHub runners do not have Chrome preinstalled
+      PUPPETEER_SKIP_DOWNLOAD: 'false'
+      # Helpful for larger Vite builds
+      NODE_OPTIONS: --max_old_space_size=4096
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install system dependencies for Chromium
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libcups2 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libgbm1 \
+            libpango-1.0-0 \
+            libasound2 \
+            fonts-liberation \
+            libxshmfence1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20 # Use a current Node.js version
           cache: 'npm'
+
+      - name: Cache Puppeteer browser downloads
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            puppeteer-${{ runner.os }}-
 
       - name: Install dependencies
         run: npm ci
@@ -38,6 +73,8 @@ jobs:
         run: npm run build
         env:
           BASE_URL: /
+          # If you need to temporarily disable prerendering for debugging, set PRERENDER=false
+          PRERENDER: 'true'
 
       - name: Add CNAME file
         run: echo "madelyn-hotchkiss.com" > ./dist/CNAME
@@ -56,5 +93,5 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment-url
+        id: deployment
         uses: actions/deploy-pages@v4

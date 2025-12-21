@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import '@fontsource/roboto/300.css'
@@ -20,11 +20,11 @@ createRoot(document.getElementById('root')).render(
     <HelmetProvider context={helmetContext}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <HashRouter>
+        <BrowserRouter>
           <ContentProvider>
             <App />
           </ContentProvider>
-        </HashRouter>
+        </BrowserRouter>
       </ThemeProvider>
     </HelmetProvider>
   </StrictMode>,
