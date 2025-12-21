@@ -36,6 +36,7 @@ jobs:
       - name: Install system dependencies for Chromium
         run: |
           sudo apt-get update
+          # Install common shared libs needed by Chromium
           sudo apt-get install -y \
             libnss3 \
             libatk-bridge2.0-0 \
@@ -48,9 +49,14 @@ jobs:
             libxfixes3 \
             libgbm1 \
             libpango-1.0-0 \
-            libasound2 \
             fonts-liberation \
             libxshmfence1
+          # Handle Ubuntu 24.04 rename: libasound2 -> libasound2t64
+          if apt-cache show libasound2t64 > /dev/null 2>&1; then \
+            sudo apt-get install -y libasound2t64; \
+          else \
+            sudo apt-get install -y libasound2; \
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
