@@ -1,5 +1,24 @@
 {
   "image": "headshot.jpeg",
   "introduction": "Hello, my name is Madelyn Hotchkiss, and I'm an Oregon licensed esthetician. I completed my education at Spectrum Advanced Esthetics, and currently work at Restore Hyper Wellness in Lake Oswego. I'm a passionate and motivated young professional. To put it simply, I love skin and I always have! My passion for people and skincare comes through in my work, and I'm excited to share that with you.",
-  "extended": "My approach as an esthetician is highly personable. It's important to me that when you come in to see me, we're working to address your needs. We'll work to identify your skincare goals, and understand how we can reach those goals by working together. More so, I love to connect, get to know you, share stories, and have fun!"
+  "extended": "My approach as an esthetician is highly personable. It's important to me that when you come in to see me, we're working to address your needs. We'll work to identify your skincare goals, and understand how we can reach those goals by working together. More so, I love to connect, get to know you, share stories, and have fun!",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://madelyn-hotchkiss.com/#person",
+    "name": "Madelyn Hotchkiss",
+    "image": "https://madelyn-hotchkiss.com/headshot.jpeg",
+    "url": "https://madelyn-hotchkiss.com",
+    "jobTitle": "Esthetician",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Restore Hyper Wellness Lake Oswego",
+      "url": "https://www.restore.com/"
+    },
+    "email": "maddy042301@icloud.com",
+    "sameAs": [
+      "https://www.instagram.com/madd.beauty.pdx",
+      "https://www.linkedin.com/in/madelyn-hotchkiss-4125a4196"
+    ]
+  }
 }

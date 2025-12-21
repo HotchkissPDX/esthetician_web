@@ -10,6 +10,7 @@ import Contact from './pages/Contact.jsx'
 import Book from './pages/Book.jsx'
 import Navigation from './components/Navigation.jsx'
 import Footer from './components/Footer.jsx'
+import SeoDefaults from './components/SeoDefaults.jsx'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Toolbar />
       <Box component="main" sx={{ py: 3, flexGrow: 1 }}>
         <Container maxWidth="lg">
+          <SeoDefaults />
           <Routes>
             <Route path="/" element={<Navigate to="/about" replace />} />
             <Route path="/about" element={<About />} />

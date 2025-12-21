@@ -11,16 +11,21 @@ import './index.css'
 import App from './App.jsx'
 import theme from './theme.js'
 import { ContentProvider } from './state/ContentProvider.jsx'
+import { HelmetProvider } from 'react-helmet-async'
+
+const helmetContext = {}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <HashRouter>
-        <ContentProvider>
-          <App />
-        </ContentProvider>
-      </HashRouter>
-    </ThemeProvider>
+    <HelmetProvider context={helmetContext}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <HashRouter>
+          <ContentProvider>
+            <App />
+          </ContentProvider>
+        </HashRouter>
+      </ThemeProvider>
+    </HelmetProvider>
   </StrictMode>,
 )
